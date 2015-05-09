@@ -1,0 +1,34 @@
+<html ng-app="repeatApp">
+<head>
+<title>
+Angular vs-repeat
+</title>
+<link rel="stylesheet" href="animate.css">
+<link rel="stylesheet"  href="style.css"> 
+</head>
+<body ng-controller="indexCtrl">
+
+<div class="menu">
+    <ul class="btn">
+        <li ng-class="!viewConfig.tileView ? 'active':''" ng-click="changeLayout(CONSTANTS.LIST)"> List View </li>
+        <li ng-class="viewConfig.tileView ? 'active':''" ng-click="changeLayout(CONSTANTS.TILE)"> Tile View </li>
+    </ul>
+</div>
+{{tileView}}
+<div class="container">
+
+<!-- If needed fixed number of element on a row  :    vs-element-on-row="3" -->
+
+    <div class="items" ng-class="!viewConfig.tileView ? 'listView':''" vs-repeat vs-tile-view='{{viewConfig.tileView}}' vs-animation-enable="true" vs-autoresize="true" >
+            <div class="item"  ng-repeat="data in dataSet" ng-bind="data"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="angular-vs-repeat.js"></script>
+<script type="text/javascript" src="index-ctrl.js"></script>
+
+</body>
+</html>
