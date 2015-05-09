@@ -1,0 +1,57 @@
+	
+.menu{
+	clear:both;
+	overflow: hidden;
+}
+
+ul.btn{
+	list-style: none;
+}
+
+ul.btn li
+{
+	margin: 2px;
+	max-width:150px;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #3385FF;
+	color: #000;
+	float: left;
+	cursor: pointer;
+}
+
+ul.btn li.active
+{
+	background-color: #B2D1FF;
+
+}
+
+.container
+{
+	width:100%;
+	position: relative;
+}
+div.items {
+	height: 100%;
+	overflow: auto;
+	max-height: 500px;
+	min-height: 200px;
+}
+
+.listView .item
+{
+	width:100% !important;
+}
+
+
+div.items .item{
+	margin: 5px;
+	width:150px;
+	text-align: center;
+	background-color: #E0EBEB;
+	color: #000;
+	float: left;
+	height: 100px;
+	line-height: 100px;
+	position: absolute;
+}
